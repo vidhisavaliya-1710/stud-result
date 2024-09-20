@@ -1,0 +1,44 @@
+<style>
+    a{
+        text-decoration: none;
+        color: black;
+    }
+</style>
+
+<center>
+    <h1>Student Details</h1>
+</center>
+
+<table border="2" cellspacing="5" cellpadding="10" align="center">
+    
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Div</th>
+        <th>Std</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+
+    <% result.forEach(function(user){%>
+        <tr>
+            <td><%= user.id%></td>
+            <td><%= user.name%></td>
+            <td><%= user.division%></td>
+            <td><%= user.stdd%></td>
+            <td>
+                <form action="/admin/studview/update" method="post">
+                    <input type="hidden" name="id" value="<%= user.id%>">
+                    <button type="submit"><a href="/admin/studview/update">Update</a></button>
+                </form>
+            </td>
+            <td>
+                <form action="/admin/studview/del" method="post">
+                    <input type="hidden" name="id" value="<%= user.id%>">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+    <%});%>
+</table>
+

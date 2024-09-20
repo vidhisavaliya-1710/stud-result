@@ -1,0 +1,38 @@
+<h1 align="center">Result</h1>
+<center>
+    <table border="2" cellspacing="10" cellpadding="5">
+        <tr>
+            <th>RollNo</th>
+            <th>Name</th>
+            <th>Div</th>
+            <th>Std</th>
+            <th>Sub1</th>
+            <th>Sub2</th>
+            <th>Sub3</th>
+            <th>Sub4</th>
+            <th>Sub5</th>
+            <th>Total</th>
+            <th>Per</th>
+            <th>Grade</th>
+            <th>Pass/Fail</th>
+        </tr>
+
+        <% result.forEach(function(view){%>
+            <tr>
+                <td><%= view.id%></td>
+                <td><%= view.name%></td>
+                <td><%= view.division%></td>
+                <td><%= view.stdd%></td>
+                <td><%= view.sub1%></td>
+                <td><%= view.sub2%></td>
+                <td><%= view.sub3%></td>
+                <td><%= view.sub4%></td>
+                <td><%= view.sub5%></td>
+                <td><%= view.total%></td>
+                <td><%= view.per%></td>
+                <td><%= view.garde%></td>
+                <td><%= view.result%></td>
+            </tr>
+        <%});%>
+    </table>
+</center>
